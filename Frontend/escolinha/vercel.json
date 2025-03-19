@@ -1,0 +1,8 @@
+{
+    "build": {
+      "env": {
+        "REACT_APP_BASE_URL": "https://gestor-escolinha-frontend.vercel.app",
+        "REACT_APP_API_URL": "https://gestor-escolinha-backend.vercel.app"
+      }
+    }
+  }
