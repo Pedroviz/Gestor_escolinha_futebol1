@@ -45,7 +45,7 @@
       <h2>Funcionalidades</h2>
       <ul>
         <li>
-          <a href="https://gestor-escolinha-frontend.vercel.app" target="_blank">Cadastro de Jogadores</a>
+          <a id="cadastro-link" href="#" target="_blank">Cadastro de Jogadores</a>
         </li>
         <li>Agendamento de Treinos</li>
         <li>Controle Financeiro</li>
@@ -57,22 +57,22 @@
   <!-- Equipe -->
   <section id="equipe">
     <div class="container">
-        <h2>Equipe</h2>
-        <div class="team">
-            <div class="member">
-                <img src="images/logo.png" alt="Logo">
-                <h3>Nome dos Membros 1</h3>
-                <p>Alunos</p>
-                <ul class="names-list">
-                    <li>Millene de Souza Junior</li>
-                    <li>João Eduardo Lúcio Araújo</li>
-                    <li>Pedro Atila Freitas Costa</li>
-                    <li>João Eduardo Lúcio Araújo</li>
-                </ul>
-            </div>
+      <h2>Equipe</h2>
+      <div class="team">
+        <div class="member">
+          <img src="images/logo.png" alt="Logo">
+          <h3>Nome dos Membros 1</h3>
+          <p>Alunos</p>
+          <ul class="names-list">
+            <li>Millene de Souza Junior</li>
+            <li>João Eduardo Lúcio Araújo</li>
+            <li>Pedro Atila Freitas Costa</li>
+            <li>João Eduardo Lúcio Araújo</li>
+          </ul>
         </div>
+      </div>
     </div>
-</section>
+  </section>
 
   <!-- Rodapé -->
   <footer>
@@ -81,5 +81,18 @@
       <a href="https://github.com/Pedroviz/gestor_escolinha_futebol" target="_blank">GitHub</a>
     </div>
   </footer>
+
+  <!-- Script para links dinâmicos -->
+  <script>
+    // Verifica se está rodando localmente ou no Vercel
+    const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
+
+    // Define a URL do frontend
+    const frontendUrl = isLocal ? "http://localhost:3000" : "https://gestor-escolinha-frontend.vercel.app";
+
+    // Atualiza o link "Cadastro de Jogadores"
+    const cadastroLink = document.getElementById("cadastro-link");
+    cadastroLink.href = frontendUrl;
+  </script>
 </body>
 </html>

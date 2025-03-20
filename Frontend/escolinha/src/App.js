@@ -10,13 +10,13 @@ function App() {
   const [posicaoAluno, setPosicaoAluno] = useState("");
   const [escolaAluno, setEscolaAluno] = useState("");
   const [enderecoAluno, setEnderecoAluno] = useState("");
-  const baseUrl = process.env.REACT_APP_BASE_URL;
   const apiUrl = process.env.REACT_APP_API_URL;
-  
+  const landingUrl = process.env.REACT_APP_LANDING_URL; // Nova variável de ambiente
+
   useEffect(() => {
     axios.get(`${apiUrl}/alunos`).then((res) => setAlunos(res.data));
   }, [apiUrl]);
-  
+
   const cadastrarAluno = () => {
     axios
       .post(`${apiUrl}/alunos`, {
@@ -36,7 +36,7 @@ function App() {
           <ul className="flex space-x-4">
             <li>
               {/* Alteração aqui: Substituir Link por <a> */}
-              <a href={`${baseUrl}/index.html`} className="text-white">
+              <a href={landingUrl} className="text-white">
                 Home
               </a>
             </li>
