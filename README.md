@@ -192,7 +192,6 @@ git push origin minha-branch
 
 ```
  Millene de Souza Junior
- João Eduardo Lúcio Araújo
  Pedro Atila Freitas Costa
  João Eduardo Lúcio Araújo
 ```
